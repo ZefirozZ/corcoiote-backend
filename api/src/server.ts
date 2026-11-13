@@ -1,5 +1,6 @@
 import express from "express";
-import routerUsers from "./routes/user.route.ts";
+//import routerUsers from "./routes/user.route.ts";
+import routerInvoices from "./routes/invoice.router.ts";
 
 import path from "node:path";
 
@@ -9,7 +10,9 @@ const app = express();
 
 app.use(express.json());
 
-app.use("/users", routerUsers);
+
+// app.use("/users", routerUsers);
+app.use("/invoices", routerInvoices);
 
 app.use(express.static(client));
 
